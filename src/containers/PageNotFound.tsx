@@ -5,8 +5,8 @@ type Props = {
   classes: any;
 };
 
-const NoPageFound = ({ classes }: Props) => {
-  return <div className={classes.title}>NoPageFound</div>;
+const PageNotFound = ({ classes }: Props) => {
+  return <div className={classes.title}>PageNotFound</div>;
 };
 
 const styles = {
@@ -15,4 +15,4 @@ const styles = {
   }
 };
 
-export default injectSheet(styles)(NoPageFound);
+export default injectSheet(styles)(PageNotFound);

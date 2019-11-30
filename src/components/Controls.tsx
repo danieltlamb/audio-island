@@ -5,7 +5,7 @@ type Props = {
   classes: any;
 };
 
-const Navigation = ({ classes }: Props) => {
+const Controls = ({ classes }: Props) => {
   return (
     <div className={classes.header}>
       <a href="/">Users</a> | <a href="/about">About</a> |{" "}
@@ -16,13 +16,13 @@ const Navigation = ({ classes }: Props) => {
 
 const styles = {
   header: {
-    width: 45,
-    height: "100%",
-    left: 0,
+    width: "100%",
+    height: 45,
+    bottom: 0,
     position: "fixed",
     background: "#ccc",
     padding: 15
   }
 };
 
-export default injectSheet(styles)(Navigation);
+export default injectSheet(styles)(Controls);

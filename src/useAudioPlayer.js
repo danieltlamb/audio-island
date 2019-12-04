@@ -4,9 +4,9 @@ function useAudioPlayer() {
   const [duration, setDuration] = useState();
   const [curTime, setCurTime] = useState();
   const [playing, setPlaying] = useState(false);
-  const [setClickedTime] = useState();
+  const [clickedTime, setClickedTime] = useState();
 
-  useEffect((playing, clickedTime, curTime) => {
+  useEffect(() => {
     const audio = document.getElementById("audio");
 
     // state setters wrappers
@@ -35,7 +35,7 @@ function useAudioPlayer() {
       audio.removeEventListener("loadeddata", setAudioData);
       audio.removeEventListener("timeupdate", setAudioTime);
     };
-  });
+  }, [playing, clickedTime, curTime]);
 
   return {
     curTime,

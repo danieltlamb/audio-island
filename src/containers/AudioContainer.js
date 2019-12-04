@@ -1,10 +1,10 @@
 import React from "react";
 import injectSheet from "react-jss";
 
-import Song from "./Song";
-import Play from "./Play";
-import Pause from "./Pause";
-import Bar from "./Bar";
+import Song from "../components/Song";
+import Play from "../components/Play";
+import Pause from "../components/Pause";
+import Bar from "../components/Bar";
 
 import useAudioPlayer from "../useAudioPlayer";
 

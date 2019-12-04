@@ -1,6 +1,6 @@
 import React from "react";
 import injectSheet from "react-jss";
-import AudioContainer from "../components/AudioContainer";
+import AudioContainer from "./AudioContainer";
 
 type Props = {
   classes: any;

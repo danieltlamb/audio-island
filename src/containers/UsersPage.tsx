@@ -1,17 +1,12 @@
 import React from "react";
 import injectSheet from "react-jss";
-import AudioContainer from "./AudioContainer";
 
 type Props = {
   classes: any;
 };
 
 const UsersPage = ({ classes }: Props) => {
-  return (
-    <div className={classes.title}>
-      <AudioContainer />
-    </div>
-  );
+  return <div className={classes.title}></div>;
 };
 
 const styles = {

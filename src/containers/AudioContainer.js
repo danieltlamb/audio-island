@@ -13,17 +13,23 @@ const styles = {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: [20, 0],
+    padding: [30, 10],
     backgroundColor: "#212527"
   },
-
-  controls: {
-    flexGrow: 1,
-    margin: [0, 20],
+  leftSide: {
+    flexGrow: 0,
+    margin: [0, 10],
     display: "flex",
-    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center"
+  },
+  rightSide: {
+    flexGrow: 1,
+    margin: [0, 30],
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    maxWidth: 2000
   }
 };
 
@@ -43,16 +49,22 @@ const AudioContainer = props => {
         <source src="./song.mp3" />
         Your browser does not support the <code>audio</code> element.
       </audio>
-      <Song
-        songName="Instant Crush"
-        songArtist="Daft Punk ft. Julian Casablancas"
-      />
-      <div className={classes.controls}>
-        {playing ? (
-          <Pause handleClick={() => setPlaying(false)} />
-        ) : (
-          <Play handleClick={() => setPlaying(true)} />
-        )}
+      <div className={classes.leftSide}>
+        <div className={classes.buttons}>
+          {playing ? (
+            <Pause handleClick={() => setPlaying(false)} />
+          ) : (
+            <Play handleClick={() => setPlaying(true)} />
+          )}
+        </div>
+        <div className={classes.songDetails}>
+          <Song
+            songName="Instant Crush"
+            songArtist="Daft Punk ft. Julian Casablancas"
+          />
+        </div>
+      </div>
+      <div className={classes.rightSide}>
         <Bar
           curTime={curTime}
           duration={duration}

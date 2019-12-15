@@ -1,15 +1,18 @@
 import React from "react";
 import injectSheet from "react-jss";
 
+import AudioContainer from "../containers/AudioContainer";
+
 type Props = {
   classes: any;
 };
 
+console.log("Controls Component");
+
 const Controls = ({ classes }: Props) => {
   return (
     <div className={classes.header}>
-      <a href="/">Users</a> | <a href="/about">About</a> |{" "}
-      <a href="/contact">Contact</a>
+      <AudioContainer />
     </div>
   );
 };
@@ -17,11 +20,9 @@ const Controls = ({ classes }: Props) => {
 const styles = {
   header: {
     width: "100%",
-    height: 45,
+    maxHeight: 200,
     bottom: 0,
-    position: "fixed",
-    background: "#ccc",
-    padding: 15
+    position: "fixed"
   }
 };
 

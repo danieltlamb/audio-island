@@ -1,5 +1,6 @@
 import React from "react";
 import injectSheet from "react-jss";
+import { PauseCircleFilled } from "@material-ui/icons";
 
 type Props = {
   handleClick: () => {};
@@ -8,9 +9,8 @@ type Props = {
 
 const styles = {
   playerButton: {
-    width: "fit-content",
-    marginBottom: 15,
     backgroundColor: "transparent",
+    color: "white",
     border: "none",
 
     "&:focus": {
@@ -27,7 +27,7 @@ function Pause(props: Props) {
 
   return (
     <button className={classes.playerButton} onClick={() => handleClick()}>
-      <div>Pause</div>
+      <PauseCircleFilled fontSize="large" />
     </button>
   );
 }

@@ -16,7 +16,7 @@ const styles = {
     textAlign: "left",
     margin: 0,
     color: "white",
-    fontSize: "3.5em",
+    fontSize: 14,
 
     "&:hover": {
       color: "greenyellow"
@@ -25,7 +25,7 @@ const styles = {
   songArtist: {
     margin: 0,
     color: "white",
-    fontSize: "1em",
+    fontSize: 12,
 
     "&:hover": {
       color: "greenyellow",

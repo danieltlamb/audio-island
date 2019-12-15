@@ -92,7 +92,7 @@ const Bar = (props: Props) => {
       >
         <span
           className={classes.barProgressKnob}
-          style={{ left: `${curPercentage - 2}%` }}
+          style={{ left: `${curPercentage - 0.5}%` }}
         />
       </div>
       <span className={classes.barTime}>{formatDuration(duration)}</span>
